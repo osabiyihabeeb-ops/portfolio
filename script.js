@@ -1,0 +1,47 @@
+function toggleDarkMode() {
+  document.body.classList.toggle("dark-mode");
+}
+
+
+const menuToggle = document.getElementById('menu-toggle');
+const navLinks = document.querySelector('.nav-links');
+
+menuToggle.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+});
+
+const form = document.getElementById('contact-form');
+
+form.addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    const name = document.getElementById('name').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const message = document.getElementById('message').value.trim();
+
+    if (!name || !email || !message) {
+        alert("Please fill in all fields.");
+        return;
+    }
+
+    alert('Thank you, '+ name +' Your message has been sent.');
+    form.reset();
+});
+
+ document.getElementById("click").addEventListener('click', () => {
+    document.getElementById("mail").innerText = "osabiyihabeeb@gmail.com";
+});
+
+
+ document.getElementById("clickBtn").addEventListener('click', () => {
+    document.getElementById("email").innerText = "osabiyihabeeb@gmail.com";
+});
+
+document.getElementById("greetBtn").addEventListener('click', () => {
+    document.getElementById("message").innerText = "Hello, How are you doing?!";
+});
+
+
+
+
+
